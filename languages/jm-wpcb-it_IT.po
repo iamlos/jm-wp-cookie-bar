@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: JM WP Cookei Bar\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: jmlapam <contact@tweetpress.fr>\n"
+"Language-Team: jmlapam <contact@tweetpress.fr>\n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.6.4\n"
+"Language: fr_FR\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid ""
+"Which CSS class do you want to add to style the close button? (default is ."
+"wpcb-close-btn)"
+msgstr ""
+"Inserisci le classi che vuoi vengano aggiunte al bottone di chiusura. "
+"( default .wpcb-close-btn )"
+
+msgid "Set the cookie expiration time? (default is 365 days)"
+msgstr "Imposta la data di scadenza del cookie. ( default 365giorni )"
+
+msgid "The text to be shown. (120 chars at most)"
+msgstr "Inserisci il testo da visualizzare ( almeno 120 caratteri )"
+
+msgid "URL for your cookie rules"
+msgstr ""
+"Digita l'url della pagina di spiegazione delle regole sull'uso dei cookie"
+
+msgid "Which position?"
+msgstr "In che posizione si vuole mostrare l'informativa"
+
+msgid "Default is top of the page"
+msgstr "Di base in alto nella pagina"
+
+msgid "top of the page"
+msgstr "in alto"
+
+msgid "bottom of the page"
+msgstr "a fondo pagina"
+
+msgid ""
+"Default is yes. Be careful, this could mess up with bar position so do not "
+"forget to add required styles in your own stylesheet."
+msgstr ""
+"Si, di default. Fai attenzione, questo potrebbe causare la scomparsa della "
+"barra se non effettuerai le dovute modifiche nel tuo css."
+
+msgid "Include basic styles?"
+msgstr "Usa lo stile di base?"
+
+msgid "yes"
+msgstr "si"
+
+msgid "no"
+msgstr "no"
+
+msgid ""
+"Cookies help us deliver our services. By using our services, you agree to "
+"our use of cookies."
+msgstr ""
+"I cookies ci aiutano a dare un servizio migliore. Usando i nostri servizi "
+"accetti la normative sui cookies"
+
+msgid "Read more"
+msgstr "Leggi tutto"
