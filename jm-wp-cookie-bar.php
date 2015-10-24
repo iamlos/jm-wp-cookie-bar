@@ -2,8 +2,8 @@
 /*
 Plugin Name: JM WP Cookie Bar
 Plugin URI: http://tweetpress.fr
-Description: Because it's mandatory! You have to warn you users you use cookies for example with Google Analytics
-Version: 1.6
+Description: Because it's mandatory whan using Google Analytics. Opt-out included !
+Version: 2.0
 Author: Julien Maury
 Author URI: http://tweetpressfr.github.io
 Text Domain: jm-wpcb
@@ -35,16 +35,12 @@ defined( 'ABSPATH' ) or die( 'No direct load!' );
 define( 'WPCB_VERSION', '1.6' );
 define( 'WPCB_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WPCB_URL', plugin_dir_url( __FILE__ ) );
-define( 'WPCB_CSS_URL', WPCB_URL . 'assets/css/' );
-define( 'WPCB_JS_URL', WPCB_URL . 'assets/js/' );
+define( 'WPCB_CSS_URL', WPCB_URL . 'css/' );
+define( 'WPCB_JS_URL', WPCB_URL . 'js/' );
 define( 'WPCB_IMG_URL', WPCB_URL . 'assets/img/' );
 define( 'WPCB_SLUG', 'jm-wpcb' );
 define( 'WPCB_LANG_DIR', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-/*
- Sources : https://www.youtube.com/watch?v=kuwnvCTIcf8  // great tutorial
- 		   https://github.com/carhartl/jquery-cookie
-*/
 
 //Call modules
 if ( is_admin() ) {
@@ -62,7 +58,6 @@ function _wpcb_early_init() {
 	if ( is_admin() ) {
 
 		$WPCB_Tool_Page = TokenToMe\wp_cookies\Options::_get_instance();
-		$WPCB_Init      = TokenToMe\wp_cookies\Init::_get_instance();
 		$WPCB_Tool_Page->init();
 
 	}

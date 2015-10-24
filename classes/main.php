@@ -24,56 +24,30 @@ class Main {
 	}
 
 	public function init() {
-		add_filter( 'body_class', array( __CLASS__, 'class_names' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'scripts' ) );
 	}
 
 	static function scripts() {
 
-		wp_register_style( 'wp-cookiebar-style', WPCB_CSS_URL . 'basic-style.css' );
-
-		$opts = get_option( 'jm_wpcb' );
-		if ( 'yes' === $opts['cookieBarStyle'] ) {
-			wp_enqueue_style( 'wp-cookiebar-style' );
-		}
-
-		wp_enqueue_script( 'wp-cookiebar-lib', WPCB_JS_URL . 'jquery.cookiebar.js', array( 'jquery' ), null, true );
-		wp_enqueue_script( 'wp-cookiebar', WPCB_JS_URL . 'cookiebar.js', array( 'wp-cookiebar-lib' ), null, true );
-
-		// support SSL
-		$is_ssl = is_ssl() ? 'https://' : 'http://';
+		wp_enqueue_script( 'wp-cookiebar', WPCB_JS_URL . 'cookiebar.js', array(), null, true );
 
 		//data to be passed
 		$opts      = get_option( 'jm_wpcb' );
-		$class     = sanitize_html_class( $opts['closeClass'] );
-		$mess      = esc_textarea( strip_tags( $opts['cookieBarText'] ) );
-		$expire    = (int) $opts['cookieBarExpire'];
-		$posi      = $opts['cookieBarPosition'];
-		$linkRules = esc_url( $opts['cookieRulesUrl'] );
-		$gaID      = sanitize_text_field( $opts['gaID'] );
-
+		$gaID      = sanitize_title_with_dashes( $opts['cookieBargaID'] );
 
 		$args = array(
-			'closeClass'    => $class,
-			'mess'          => $mess,
-			'expire'        => $expire,
-			'posi'          => $posi,
-			'linkRules'     => $linkRules,
-			'textlinkRules' => __( 'Read more', 'jm-wpcb' ),
-			'yes'           => __( 'Yes', 'jm-wpcb' ),
-			'no'            => __( 'No', 'jm-wpcb' ),
-			'gaID'          => $gaID,
+			'gaID'         => sanitize_title_with_dashes( $gaID ),
+			'yes'          => __( 'Yes', 'jm-wpcb' ),
+			'no'           => __( 'No', 'jm-wpcb' ),
+			'explanation'  => __( '<b>Google Analytics</b></span></div><br><div>This website is using Google Analytics. Some data are sent to Google Inc. This is meant to improve your experience. Do you agree ?</div>', 'jm-wpcb' ),
+			'confirm_no'   => __( 'Vous vous êtes opposé au dépôt de cookies de mesures d\'audience dans votre navigateur', 'jm-wpcb' ),
+			'donottrack'   => __( 'DoNotTrack signal is enabled on your browser, do you confirm you want to activate this functionality ?', 'jm-wpcb' ),
+			'a_more'       => __( 'Read more and/or opt out', 'jm-wpcb' ),
+			'mess'         => __( 'This website is using Google Analytics. By browsing this website you authorize us to send a cookie to your browser.', 'jm-wpcb' ),
+			'dnt'          => __( 'You`\'ve enabled DNT, we\'re respecting your choice"', 'jm-wpcb' ),
 		);
 
 		wp_localize_script( 'wp-cookiebar', '_wpcb__obj', $args );
 
-	}
-
-	static function class_names( $classes ) {
-		// add 'class-name' to the $classes array
-		$classes[] = 'wpcb-cookie-bar';
-
-		// return the $classes array
-		return $classes;
 	}
 }

@@ -83,26 +83,9 @@ class Options {
 			return $new;
 		}
 
-		if ( isset( $options['closeClass'] ) ) {
-			$new['closeClass'] = sanitize_html_class( $options['closeClass'] );
-		}
-		if ( isset( $options['cookieBarExpire'] ) ) {
-			$new['cookieBarExpire'] = (int) $options['cookieBarExpire'];
-		}
-		if ( isset( $options['cookieBarText'] ) ) {
-			$new['cookieBarText'] = esc_attr( strip_tags( $options['cookieBarText'] ) );
-		}
-		if ( isset( $options['cookieRulesUrl'] ) ) {
-			$new['cookieRulesUrl'] = esc_url( $options['cookieRulesUrl'] );
-		}
-		if ( isset( $options['gaID'] ) ) {
-			$new['gaID'] = sanitize_html_class( $options['gaID'] );
-		}
-		if ( isset( $options['cookieBarPosition'] ) ) {
-			$new['cookieBarPosition'] = $options['cookieBarPosition'];
-		}
-		if ( isset( $options['cookieBarStyle'] ) ) {
-			$new['cookieBarStyle'] = $options['cookieBarStyle'];
+		if ( isset( $options['cookieBargaID'] ) ) {
+
+			$new['cookieBargaID'] = strtoupper( sanitize_title_with_dashes( $options['cookieBargaID'] ) );
 		}
 
 		return $new;

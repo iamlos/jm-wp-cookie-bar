@@ -39,6 +39,14 @@ You can even deactivate basic style and style it entirely in your main styleshee
 
 == Changelog ==
 
+# 2.0
+* 24 Oct 2015
+* Be careful this update breaks everything
+* No option any more except  NEW PARAMETER GA ID (Google Analytics ID)
+* No style or text option, it is meant to work with GA with simple text and call to action
+* Still the text is translation ready
+* Opt out for cookie bar !
+
 # 1.6
 * 05 May 2015
 * Code refactor

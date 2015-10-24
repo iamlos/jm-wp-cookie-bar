@@ -9,20 +9,6 @@ if ( ! defined( 'WPCB_VERSION' ) ) {
 
 class Init {
 
-	protected static $instance;
-	protected $WPCB_Init;
-
-	static function _get_instance() {
-
-		if ( ! isset( self::$instance ) ) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
-
-	//On activation
-
 	/**
 	 * Handle activation
 	 */
@@ -57,12 +43,7 @@ class Init {
 
 	public static function get_default_options() {
 		return array(
-			'closeClass'        => 'wpcb-close-btn',
-			'cookieBarPosition' => 'bottom',
-			'cookieBarStyle'    => 'yes',
-			'cookieRulesUrl'    => '',
-			'cookieBarText'     => __( 'Cookies help us deliver our services. By using our services, you agree to our use of cookies.', WPCB_SLUG ),
-			'cookieBarExpire'   => '365',
+			'cookieBargaID'     => '',
 		);
 	}
 }
