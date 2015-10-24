@@ -2,10 +2,10 @@
 /*
 Plugin Name: JM WP Cookie Bar
 Plugin URI: http://tweetpress.fr
-Description: Because it's mandatory whan using Google Analytics. Opt-out included !
+Description: Because it's mandatory when using Google Analytics. Opt-out included !
 Version: 2.0
 Author: Julien Maury
-Author URI: http://tweetpressfr.github.io
+Author URI: http://tweetpress.fr
 Text Domain: jm-wpcb
 Domain Path: /languages
 */

@@ -1,7 +1,7 @@
 === JM WP Cookie Bar ===
 Contributors: jmlapam
 Tags: cookie, bar, policy
-Tested up to: 4.0.1
+Tested up to: 4.4 alpha
 Requires at least: 3.1.0
 License: GPLv2 or later
 Stable tag: trunk
