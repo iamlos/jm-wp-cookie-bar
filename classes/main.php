@@ -40,7 +40,7 @@ class Main {
 			'yes'          => __( 'Yes', 'jm-wpcb' ),
 			'no'           => __( 'No', 'jm-wpcb' ),
 			'explanation'  => __( '<b>Google Analytics</b></span></div><br><div>This website is using Google Analytics. Some data are sent to Google Inc. This is meant to improve your experience. Do you agree ?</div>', 'jm-wpcb' ),
-			'confirm_no'   => __( 'Vous vous êtes opposé au dépôt de cookies de mesures d\'audience dans votre navigateur', 'jm-wpcb' ),
+			'confirm_no'   => __( 'You decided to opt out from cookie tracking.', 'jm-wpcb' ),
 			'donottrack'   => __( 'DoNotTrack signal is enabled on your browser, do you confirm you want to activate this functionality ?', 'jm-wpcb' ),
 			'a_more'       => __( 'Read more and/or opt out', 'jm-wpcb' ),
 			'mess'         => __( 'This website is using Google Analytics. By browsing this website you authorize us to send a cookie to your browser.', 'jm-wpcb' ),
