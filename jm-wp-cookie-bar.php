@@ -32,12 +32,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 defined( 'ABSPATH' ) or die( 'No direct load!' );
 
-define( 'WPCB_VERSION', '1.6' );
+define( 'WPCB_VERSION', '2.0' );
 define( 'WPCB_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WPCB_URL', plugin_dir_url( __FILE__ ) );
 define( 'WPCB_CSS_URL', WPCB_URL . 'css/' );
 define( 'WPCB_JS_URL', WPCB_URL . 'js/' );
-define( 'WPCB_IMG_URL', WPCB_URL . 'assets/img/' );
 define( 'WPCB_SLUG', 'jm-wpcb' );
 define( 'WPCB_LANG_DIR', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
